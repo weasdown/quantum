@@ -29,8 +29,16 @@ class StateSet extends SetBase<State> {
 
   @override
   bool remove(Object? value) {
-    // TODO: implement remove
-    throw UnimplementedError();
+    if (value is! State) {
+      return false;
+    } else {
+      if (contains(value)) {
+        _states.remove(value);
+        return true;
+      } else {
+        return false;
+      }
+    }
   }
 
   /// Internal, private view of the states.
