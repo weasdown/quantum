@@ -5,14 +5,14 @@ class State extends Object {}
 
 /// A [Set] containing [State]s.
 class StateSet extends SetBase<State> {
-  StateSet({required this.states});
+  StateSet({required Set<State> states}) : _states = states;
 
   @override
   bool add(State state) => states.add(state);
 
   @override
   bool contains(Object? element) =>
-      (element is! State) ? false : states.contains(element);
+      (element is! State) ? false : _states.contains(element);
 
   @override
   // TODO: implement iterator
@@ -33,7 +33,11 @@ class StateSet extends SetBase<State> {
     throw UnimplementedError();
   }
 
-  final Set<State> states;
+  /// Internal, private view of the states.
+  final Set<State> _states;
+
+  /// Gets an unmodifiable version of [_states].
+  UnmodifiableSetView<State> get states => UnmodifiableSetView<State>(_states);
 
   @override
   Set<State> toSet() => UnmodifiableSetView<State>(states);
