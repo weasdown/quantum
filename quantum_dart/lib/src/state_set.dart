@@ -22,8 +22,7 @@ class StateSet extends SetBase<State> {
       (element is! State) ? false : _states.contains(element);
 
   @override
-  // TODO: implement iterator
-  Iterator<State> get iterator => throw UnimplementedError();
+  Iterator<State> get iterator => _states.iterator;
 
   @override
   int get length => states.length;
