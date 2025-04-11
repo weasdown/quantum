@@ -12,6 +12,15 @@ void main() {
           throwsA(TypeMatcher<AssertionError>()),
         );
       });
+
+      test('Throws if any values are < 0', () {
+        List<double> values = [-0.2, 0.8, 0.4];
+
+        expect(
+          () => ProbabilityVector(values: values),
+          throwsA(TypeMatcher<AssertionError>()),
+        );
+      });
     });
   });
 }
