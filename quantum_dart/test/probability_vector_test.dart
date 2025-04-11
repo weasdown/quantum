@@ -39,6 +39,15 @@ void main() {
           throwsA(TypeMatcher<AssertionError>()),
         );
       });
+
+      test('Builds successfully for valid values', () {
+        List<double> values = [0.9, 0.1];
+
+        ProbabilityVector vector = ProbabilityVector(values: values);
+
+        expect(vector, isA<ProbabilityVector>());
+        expect(vector.values, values);
+      });
     });
   });
 }
