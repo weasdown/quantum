@@ -3,14 +3,15 @@ import 'package:test/test.dart';
 
 void main() {
   group('A group of tests', () {
-    final awesome = Awesome();
+    QuantumInformation quantumInfo = QuantumInformation();
 
     setUp(() {
       // Additional setup goes here.
     });
 
     test('First Test', () {
-      expect(awesome.isAwesome, isTrue);
+      expect(quantumInfo, isA<Information>());
+      expect(true, isTrue);
     });
   });
 }
