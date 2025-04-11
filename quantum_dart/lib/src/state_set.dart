@@ -8,7 +8,14 @@ class StateSet extends SetBase<State> {
   StateSet({required Set<State> states}) : _states = states;
 
   @override
-  bool add(State state) => states.add(state);
+  bool add(State state) {
+    if (!contains(state)) {
+      states.add(state);
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   @override
   bool contains(Object? element) =>
