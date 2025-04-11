@@ -28,10 +28,12 @@ class StateSet extends SetBase<State> {
   int get length => states.length;
 
   @override
-  State? lookup(Object? element) {
-    // TODO: implement lookup
-    throw UnimplementedError();
-  }
+  State? lookup(Object? element) =>
+      (element is! State)
+          ? null
+          : (_states.contains(element))
+          ? element
+          : null;
 
   @override
   bool remove(Object? value) {
