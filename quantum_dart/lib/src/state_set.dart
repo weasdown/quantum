@@ -1,6 +1,6 @@
-// TODO add subtypes for classical states and probabilistic states.
 import 'dart:collection';
 
+// TODO add subtypes for classical states and probabilistic states.
 class State extends Object {}
 
 /// A [Set] containing [State]s.
