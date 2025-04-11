@@ -21,6 +21,24 @@ void main() {
           throwsA(TypeMatcher<AssertionError>()),
         );
       });
+
+      test('Throws if any values are > 1', () {
+        List<double> values = [1.2];
+
+        expect(
+          () => ProbabilityVector(values: values),
+          throwsA(TypeMatcher<AssertionError>()),
+        );
+      });
+
+      test('Throws if value sum != 1', () {
+        List<double> values = [0.9, 0.2];
+
+        expect(
+          () => ProbabilityVector(values: values),
+          throwsA(TypeMatcher<AssertionError>()),
+        );
+      });
     });
   });
 }
