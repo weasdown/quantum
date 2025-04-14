@@ -107,7 +107,7 @@ downloads/
 eggs/
 .eggs/
 lib/
-!quantum_dart/lib
+!custom/quantum_dart/lib
 lib64/
 parts/
 sdist/
