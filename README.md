@@ -293,7 +293,7 @@ Project Link: [https://github.com/weasdown/quantum](https://github.com/weasdown/
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/weasdown
 
-[documentation]: docs
+[documentation]: custom/docs
 
 [//]: # ([product-screenshot]: images/screenshot.png)
 
