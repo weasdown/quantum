@@ -11,8 +11,7 @@ environment:
 dependencies:
   # path: ^1.8.0
   matrix:
-#    git: git@github.com:Oxford-Hypernautics/matrix.git
-    path: 'C:/Users/weasd/dev/design_mariner/packages/matrix/'
+    git: git@github.com:Oxford-Hypernautics/matrix.git
 
 dev_dependencies:
   lints: ^5.0.0
